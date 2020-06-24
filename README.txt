@@ -7,7 +7,7 @@ Twitch Project
 VISUALIZATION CUMULATIVE PROJECTS
 (part-2)
 
-(For ìTwitch Part-1: Analyze Data with SQLî see README_SQLite.txt)
+(For ‚ÄúTwitch Part-1: Analyze Data with SQL‚Äù see README_SQLite.txt)
 
 ----------------------------------------------------------------------------------------
 
@@ -29,15 +29,16 @@ Overview:
 
 Twitch Part-2: Visualize Data with Matplotlib
 
-Welcome to†Part-2†of the†Twitch Project. In this part of the project, you will be taking your findings 
+Welcome to¬†Part-2¬†of the¬†Twitch Project. In this part of the project, you will be taking your findings 
 from the SQL queries and visualize them using Python and Matplotlib, in the forms of:
 
-* Bar Graph:†Featured Games
-* Pie Chart:†Stream Viewersí Locations
-* Line Graph:†Time Series Analysis
+* Bar Graph:¬†Featured Games
+* Pie Chart:¬†Stream Viewers‚Äô Locations
+* Line Graph:¬†Time Series Analysis
 
-The Twitch Science Team provided this practice dataset. You can download the†.csv†files (800,000 rows) from†GitHub.
-Note:†This is data is scrubbed and is meant for practice use only.
+The Twitch Science Team provided this practice dataset. You can download the¬†.csv¬†files (800,000 rows) from¬†GitHub.
+Note:¬†This is data is scrubbed and is meant for practice use only.
+
 ----------------------------------------------------------------------------------------
 
 Project map:
@@ -45,7 +46,7 @@ Project map:
 python code lines file
 twitch_project\twitch.py
 
-data flies
+data files:
 twitch_project\data\chat.csv
 twitch_project\data\video_play.csv
 
@@ -71,7 +72,7 @@ Project:
 --- Bar Graph: Featured Games
 
 1.
-Twitchís home page has a†Featured Games†section where it lists the ìGames people are watching nowî.
+Twitch‚Äôs home page has a¬†Featured Games¬†section where it lists the ‚ÄúGames people are watching now‚Äù.
 In the previous part of the project, you used SQL to find the top 10 trending games (on January 1st, 2015) and their number of viewers.
 It looked something like this:
 https://s3.amazonaws.com/codecademy-content/projects/twitch/featured-sql.png
@@ -86,7 +87,7 @@ Now, use the plt.bar() to plot a bar graph using range(len(games)) and viewers a
 Then, use plt.show() to visualize it.
 
 3.
-Letís make the graph more informative by doing the following:
+Let‚Äôs make the graph more informative by doing the following:
 Add a title
 Add a legend
 Add axis labels
@@ -113,21 +114,21 @@ In the next few tasks, you are going to take this data and make a pie chart
 The labels and countries are already loaded into script.py:
 labels = ["US", "DE", "CA", "N/A", "GB", "TR", "BR", "DK", "PL", "BE", "NL", "Others"]
 countries = [447, 66, 64, 49, 45, 28, 25, 20, 19, 17, 17, 279]
-Letís add some colors!
-Because there are 12 countries (including N/A and Others), letís create an array called colors and add 12 color codes to it, like so:
+Let‚Äôs add some colors!
+Because there are 12 countries (including N/A and Others), let‚Äôs create an array called colors and add 12 color codes to it, like so:
 colors = ['lightskyblue', 'gold', 'lightcoral', 'gainsboro', 'royalblue', 'lightpink', 'darkseagreen', 'sienna', 'khaki', 'gold', 'violet', 'yellowgreen']
 Check out the Matplotlib color codes to find your inner Bob Ross.
 Then, use plt.pie() to plot a pie chart.
 Lastly, use plt.show() to visualize it.
 
 7.
-Optional: Letís make it more visually appealing and more informative.
-First, letís ìexplodeî, or break out, the 1st slice (United States)
+Optional: Let‚Äôs make it more visually appealing and more informative.
+First, let‚Äôs ‚Äúexplode‚Äù, or break out, the 1st slice (United States)
 Add the explode
 Add shadows
 Turn the pie 345 degrees
 Add percentages
-Configure the percentagesí placement
+Configure the percentages‚Äô placement
 
 8.
 The visualization should look something like:
@@ -139,7 +140,7 @@ https://s3.amazonaws.com/codecademy-content/projects/twitch/pie.png
 We were able to find the number of US viewers at different hours of the day on January 1st, 2015:
 https://s3.amazonaws.com/codecademy-content/projects/twitch/time.png
 
-Letís make this into a line graph.
+Let‚Äôs make this into a line graph.
 
 10.
 The hour and viewers_hour area already loaded into script.py:
@@ -149,7 +150,7 @@ Use plt.plot() to plot a line graph.
 Then, add the title, the axis labels, legend, and ticks.
 
 11.
-There is some uncertainty in these numbers because some people leave their browsers open. Letís account for a 15% error in the viewers_hour data.
+There is some uncertainty in these numbers because some people leave their browsers open. Let‚Äôs account for a 15% error in the viewers_hour data.
 First, create a list containing the upper bound of the viewers_hour and call it y_upper.
 Then, create a list containing the lower bound of the viewers_hour and call it y_lower.
 Lastly, use plt.fill_between() to shade the error, with an alpha of 0.2.
